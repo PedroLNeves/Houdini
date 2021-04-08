@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Houdini</title>
+
+</head>
+<body>
+    <!-- <h1 id="tittle">I'll be swapped out.</h1> -->
+    <script>
+      
+    </script>
+    <!-- <button></button> -->
+    <h1>Hello, traveler of the internet!</h1>
+    <h2>Wanna see some... magic?</h2>
+    <h3>Think of a number between <span id="minNum"></span> and <span id="maxNum"></span></h3>
+    <hr>
+    <h3>Is the number:<span id= "attempt"></span> ?</h3> 
+    <button onclick="Bigger()">It's bigger!</button>
+    <button onclick="Smaller()">It's smaller!</button>
+    <button onclick="Right()">It's right!</button>
+    <hr>
+    <h1 id="Genius"></h1>
+
+    <script>
+        var minNum = 0;
+        var maxNum = 50;
+        var attempt = Math.round((minNum + maxNum) / 2);
+
+        document.getElementById("minNum").innerHTML = minNum;
+        document.getElementById("maxNum").innerHTML = maxNum;
+        document.getElementById("attempt").innerHTML = attempt;
+        var Bigger = function()
+        {
+            minNum = attempt;
+            attempting();
+            document.getElementById("attempt").innerHTML = attempt;
+        }
+        var Smaller = function()
+        {
+            maxNum = attempt;
+            attempting();
+            document.getElementById("attempt").innerHTML = attempt;
+        }
+        var Right = function()
+        {
+            document.getElementById("Genius").innerHTML = "Impressed ?";
+        }
+
+        function attempting()
+        {
+            attempt = Math.round((minNum + maxNum) / 2);
+        }
+    </script>
+    
+</body>
+</html>
